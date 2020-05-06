@@ -38,7 +38,7 @@ BranchPlugin.prototype.apply = function (compiler) {
 		var userName = execSync("git config user.name", { "encoding": "utf8" });
 		var mailName = execSync("git config user.email", { "encoding": "utf8" });
 		var publishTime = dateFormat("YYYY-mm-dd HH:MM:SS", new Date());
-		var publishStr = "\u53D1\u5E03\u8005:" + userName + "\u90AE\u7BB1:" + mailName + "\u53D1\u5E03\u65E5\u671F:" + publishTime + "\n\u53D1\u5E03\u5206\u652F:" + branchInfo + new Array(80).join("*") + "\n";
+		var publishStr = "\u8D44\u6E90\u5305\u63D0\u4F9B\u8005:" + userName + "\u90AE\u7BB1:" + mailName + "\u751F\u6210\u65E5\u671F:" + publishTime + "\n\u53D1\u5E03\u5206\u652F:" + branchInfo + new Array(80).join("*") + "\n";
 
 		// 最后一次提交记录信息
 		var commit = execSync("git show -s --format=%H").toString().trim(); // 姓名

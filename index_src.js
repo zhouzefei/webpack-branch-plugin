@@ -34,7 +34,7 @@ BranchPlugin.prototype.apply = function(compiler) {
 		const userName = execSync("git config user.name", { "encoding": "utf8" });
 		const mailName = execSync("git config user.email", { "encoding": "utf8" });
 		const publishTime = dateFormat("YYYY-mm-dd HH:MM:SS", new Date());
-		const publishStr = `发布者:${userName}邮箱:${mailName}发布日期:${publishTime}\n发布分支:${branchInfo}${new Array(80).join("*")}\n`;
+		const publishStr = `资源包提供者:${userName}邮箱:${mailName}生成日期:${publishTime}\n发布分支:${branchInfo}${new Array(80).join("*")}\n`;
 
 		// 最后一次提交记录信息
 		let commit = execSync("git show -s --format=%H").toString().trim(); // 姓名
